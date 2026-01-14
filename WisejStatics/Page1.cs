@@ -18,7 +18,6 @@ namespace WisejStatics
         {
             Application.Update(this, () =>
             {
-                timesClicked++;
                 button1.Text = "Times Clicked: " + timesClicked.ToString();
             });
         }
@@ -26,6 +25,7 @@ namespace WisejStatics
 
         private void button1_Click(object sender, EventArgs e)
         {
+            timesClicked++;
             IncrementTimesClicked?.Invoke(null, EventArgs.Empty);
         }
 
