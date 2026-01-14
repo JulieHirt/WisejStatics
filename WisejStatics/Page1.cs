@@ -7,14 +7,14 @@ namespace WisejStatics
     {
         public static int timesClicked = 0;
 
-        public static event EventHandler IncrementTimesClicked;
+        public static event EventHandler DisplayTimesClicked;
         public Page1()
         {
             InitializeComponent();
-            IncrementTimesClicked += IncrementTimesClicked_Handler;
+            DisplayTimesClicked += DisplayTimesClicked_Handler;
         }
 
-        private void IncrementTimesClicked_Handler(object sender, EventArgs e)
+        private void DisplayTimesClicked_Handler(object sender, EventArgs e)
         {
             Application.Update(this, () =>
             {
@@ -26,7 +26,7 @@ namespace WisejStatics
         private void button1_Click(object sender, EventArgs e)
         {
             timesClicked++;
-            IncrementTimesClicked?.Invoke(null, EventArgs.Empty);
+            DisplayTimesClicked?.Invoke(null, EventArgs.Empty);
         }
 
         private void Page1_Load(object sender, EventArgs e)
