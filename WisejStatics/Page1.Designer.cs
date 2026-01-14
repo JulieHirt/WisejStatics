@@ -28,16 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            SuspendLayout();
+            this.button1 = new Wisej.Web.Button();
+            this.SuspendLayout();
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(358, 175);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(245, 85);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Times Clicked: 0";
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Page1
             // 
-            Name = "Page1";
-            ResumeLayout(false);
+            this.Controls.Add(this.button1);
+            this.Name = "Page1";
+            this.Size = new System.Drawing.Size(1282, 528);
+            this.Load += new System.EventHandler(this.Page1_Load);
+            this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private Wisej.Web.Button button1;
     }
 }
